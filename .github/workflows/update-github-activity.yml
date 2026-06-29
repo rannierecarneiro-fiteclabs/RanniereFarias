@@ -19,13 +19,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Update GitHub activity in README
         run: node scripts/generate-github-activity.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_USERNAME: RanniereFarias
+          GITHUB_USERNAME: rannierecarneiro-fiteclabs
 
       - name: Commit and push changes
         run: |
